@@ -1,0 +1,17 @@
+
+
+::-webkit-input-placeholder {
+    font-family: cursive;
+    font-style: italic;
+}
+:-moz-placeholder { 
+    font-family: cursive; 
+    font-style: italic;
+}
+::-moz-placeholder {
+    font-family: cursive;  
+}
+:-ms-input-placeholder {  
+    font-family: cursive; 
+    font-style: italic;
+}

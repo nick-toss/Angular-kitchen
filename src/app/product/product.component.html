@@ -1,0 +1,16 @@
+
+<div class="main-cont">
+    <div class="prod" *ngIf="prod && commentsList" [@appears]="'show'">
+        <img class="prod-img" [src]="prod.image">
+        <div class="prod-name">
+            {{ prod.title }}, Оценка: {{ middleRate }} из 5; 
+            <a [routerLink]="['/catalog', prod.title, prod.id, 'comments-list', prod.id]">Отзывов: {{ commentsList.length }}</a>
+        </div>
+        <div class="prod-descr">{{ prod.text }}</div>
+        <a [routerLink]="['/catalog']">&larr;Вернуться к каталогу</a>
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+
+

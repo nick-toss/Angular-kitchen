@@ -1,0 +1,16 @@
+
+<div class="main-cont">
+    <div class="cat-cont" *ngIf="catalog && commentsList" [@appears]="'show'">
+        <div class="prod" *ngFor="let prod of catalog">
+            <a [routerLink]="['/catalog', prod.title, prod.id]">
+                <img [src]="prod.image">
+                <div class="prod-name">{{ prod.title }}</div>
+                <div class="comm-cont">
+                    <span>Оценка - <b>{{ prod.middleRate }}</b>, </span>
+                    <span>Кол-во отзывов: <b>{{ prod.commentsList.length }}</b></span>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+

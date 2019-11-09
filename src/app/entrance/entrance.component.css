@@ -1,0 +1,69 @@
+
+.form-ent-cont {
+  width: 400px;
+  height: 450px;
+  padding: 50px;
+  border-radius: 0 0 50px 50px;
+  background-color:  white;
+}
+
+
+.invalid-control {
+  border-color: brown;
+  color: brown;
+}
+
+
+.invalid-control::placeholder {
+  color: brown;
+}
+
+
+.invalid-control:focus {
+  border-color: brown;
+}
+
+
+input {
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid grey;
+}
+
+
+input:focus {
+  outline: none;
+  border-color: goldenrod;
+}
+
+
+button {
+  width: 300px;
+  border-radius: 20px; 
+}
+
+
+span {
+  color: brown;
+  font-family: cursive;  
+}
+
+
+h4 {
+  font-family: cursive;
+  font-weight: bold;
+  user-select: none;
+}
+
+
+p {
+  color: grey;
+  position: absolute;
+  left: 75px;
+}
+
+
+a { 
+  text-decoration: none; 
+}
+

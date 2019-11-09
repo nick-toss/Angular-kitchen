@@ -1,0 +1,29 @@
+
+.comments-list {
+  position: relative;
+  top: 20%;
+  height: auto;
+  max-height: 450px;
+  overflow-y: auto;
+  margin-top: 10px;
+  padding: 30px;
+  background-color: wheat;
+  border-radius: 20px;
+}
+
+
+button {
+  position: relative;
+  left: 290px;
+  border-radius: 20px;
+}
+
+
+span {
+  word-wrap: break-word;
+}
+
+
+b {
+  font-family: fantasy;
+}

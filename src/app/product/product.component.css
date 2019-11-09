@@ -1,0 +1,54 @@
+
+.main-cont {
+  position: relative;
+  background-color: gray;
+  padding: 35px;
+  height: 100vh;
+}
+
+
+.prod {
+  background-color: white;
+  position: relative;
+  left: 25%;
+  padding: 10px;
+  width: 800px;
+  height: auto;
+  border-radius: 20px;  
+}
+
+
+.prod:hover {
+  box-shadow: 0 1px 10px 0 black; 
+}
+
+
+.prod-img {
+  cursor: pointer;
+  position: relative;
+  left: 250px;
+}
+
+
+.prod-img:hover + .prod-name {
+  border-top: 1px solid goldenrod;
+  color: goldenrod;
+  font-weight: bold;
+}
+
+
+.prod-name {
+  width: 780px;
+  font-size: 20px;
+  padding-top: 10px;
+  font-family: cursive;
+  color: grey;
+  border-top: 1px solid grey;
+}
+
+
+.prod-name a {
+  text-decoration: none;
+}
+
+    

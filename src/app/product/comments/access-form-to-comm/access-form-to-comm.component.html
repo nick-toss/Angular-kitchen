@@ -1,0 +1,45 @@
+
+<div class="new-comm" *ngIf="accessFormIsVisible" [@appears]="'show'">
+    <label for="email">
+        <h4 [ngStyle]="{ 'color': email.invalid && email.touched || wrongEmail? 'brown' : 'goldenrod' }">
+            Email:
+        </h4>
+    </label><br>
+    <input 
+        ngModel
+        email 
+        required
+        #email="ngModel" 
+        name="email"
+        id="email" 
+        type="text" 
+        autocomplete="off"
+        placeholder="Введите"
+        [ngClass]="{ 'invalid-control': email.invalid && email.touched || wrongEmail }" 
+        (click)="wrongEmail = false"
+    >
+    <span class="emailError" *ngIf="email.errors?.required && email.touched">Email не может быть пустым!</span>
+    <span class="emailError" *ngIf="email.errors?.email && email.touched">Введите корректный Email!</span><br>
+    <span class="emailError" *ngIf="wrongEmail">Оставлять отзывы могут только зарегистрированные пользователи!</span><br><br>
+    <button type="button" class="btn btn-warning" (click)="toEntToComm(email)" [disabled]="email.invalid">Вход!</button><br><br>
+    <p style="margin-left: 25px">Нет аккаунта?&nbsp;<a [routerLink]="['/kitchen']">Зарегистрируйтесь!</a></p>
+</div><br>
+
+<div class="com-form" *ngIf="commFormIsVisible" [@appears]="'show'">
+    <span>Оцените товар:&nbsp;&nbsp;<button (click)="change(false)">-</button>&nbsp;{{ rate }}&nbsp;<button (click)="change(true)">+</button></span>  
+    <div class="comm-text">
+        <label for="commText"><b [ngStyle]="{'color': commText.invalid && commText.touched ? 'brown' : ''}">Ваш комментарий:</b></label>
+        <textarea 
+            rows="5" 
+            cols="62"
+            id="commText" 
+            name="commText"
+            ngModel
+            required
+            #commText="ngModel"
+            [ngClass]="{ 'comm-text-error': commText.invalid && commText.touched }" 
+        >
+        </textarea>
+    </div>
+    <button class="btn btn-primary" (click)="toAddComm(commText)" [disabled]="commText.invalid || !rate">Отправить</button>
+</div>

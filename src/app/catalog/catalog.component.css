@@ -1,0 +1,62 @@
+
+.main-cont {
+  position: relative;
+  background-color: lightblue;
+  height: 1000px;
+}
+
+
+.cat-cont {
+  position: relative;
+  top: 10%;
+  left: 25%;
+  width: 845px;
+}
+
+
+.prod {
+  display: inline-block;
+  background-color: white;
+  padding: 10px;
+  margin: 5px;
+  width: 270px;
+  font-family: cursive;
+  border-radius: 20px;
+}
+
+
+.prod:hover {
+  box-shadow: 0 1px 10px 0 black;
+  font-weight: bold; 
+}
+
+
+.prod-name {
+  font-size: 20px;
+  user-select: none;
+  text-align: center;
+  border-top: 1px solid lightblue;
+}
+
+
+.prod:hover .prod-name {
+  color: brown;
+  border-top: 1px solid brown;
+}
+
+
+.prod:hover b {
+  color: royalblue; 
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+
+.comm-cont {
+  font-size: 10px;
+  text-align: center;
+}

@@ -1,0 +1,12 @@
+
+<div class="comments-list" [@appears]="'show'">
+    <button type="button" #buttComm class="btn btn-warning" (click)="toAddComm()">Оставить отзыв!</button>
+    <router-outlet></router-outlet>
+    <div *ngFor="let comm of commentsList">
+        <p>
+            <b>{{ comm.createdBy.username }}</b>, Оценка - <b>{{ comm.rate }}</b>.<br> 
+            <span>{{ comm.text }}</span><br>
+            <span>{{ comm.date }}</span>
+        </p>
+    </div>
+</div>

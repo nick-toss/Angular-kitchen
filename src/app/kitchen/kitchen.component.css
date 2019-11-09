@@ -1,0 +1,37 @@
+
+.main-container {
+  position: relative;
+  background-color: grey;
+  height: 100vh;
+}
+
+
+.kitchen-cont {
+  position: relative;
+  top: 90px;
+  left: 700px;
+  width: 400px;
+  border-radius: 50px;
+  box-shadow: 0 1px 10px 0px black;
+}
+
+
+.kitchen-title {
+  background-color: white;
+  position: relative;
+  border-bottom: 2px solid goldenrod;
+  border-radius: 50px 50px 0 0;
+  width: 400px;
+  padding: 10px;
+  user-select: none;
+}
+
+
+h4 {
+  position: relative;
+  color: goldenrod;
+  font-family: cursive;
+  font-weight: bold;
+  top: 5px;
+  left: 90px;
+}
