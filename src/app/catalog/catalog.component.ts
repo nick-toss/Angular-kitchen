@@ -5,7 +5,7 @@ import { appears } from '../animations/appears';
 @Component({
   selector: 'app-catalog',
   templateUrl: './catalog.component.html',
-  styleUrls: ['./catalog.component.css'],
+  styleUrls: ['./catalog.component.scss'],
   animations: [appears]
 })
 

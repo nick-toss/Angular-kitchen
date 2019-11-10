@@ -6,7 +6,7 @@ import { appears } from 'src/app/animations/appears';
 @Component({
   selector: 'app-comments',
   templateUrl: './comments.component.html',
-  styleUrls: ['./comments.component.css'],
+  styleUrls: ['./comments.component.scss'],
   animations: [appears]
 })
 

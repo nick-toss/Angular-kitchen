@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-access-form-to-comm',
   templateUrl: './access-form-to-comm.component.html',
-  styleUrls: ['./access-form-to-comm.component.css'],
+  styleUrls: ['./access-form-to-comm.component.scss'],
   animations: [appears]
 })
 

@@ -8,7 +8,7 @@ import { appears } from '../animations/appears';
 @Component({
   selector: 'app-entrance',
   templateUrl: './entrance.component.html',
-  styleUrls: ['./entrance.component.css'],
+  styleUrls: ['./entrance.component.scss'],
   animations: [appears]
 })
 

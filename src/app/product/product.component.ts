@@ -6,7 +6,7 @@ import { appears } from '../animations/appears';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
-  styleUrls: ['./product.component.css'],
+  styleUrls: ['./product.component.scss'],
   animations: [appears]
 })
 
