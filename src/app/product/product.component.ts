@@ -12,10 +12,10 @@ import { appears } from '../animations/appears';
 
 export class ProductComponent implements OnInit {
 
-  prodId;
   prod;
-  commentsList;
+  prodId;
   middleRate;
+  commentsList;
 
   toFindMiddleRate() {
     let max = 0;

@@ -68,7 +68,7 @@ export class RegistrationComponent implements OnInit {
     return new Promise((resolve) => {
       let file = this.file.nativeElement;
       let format = ['rar', 'txt', 'rtf', 'doc', 'docx', 'pdf', 'otd', 'html', 'js'].find(item => 
-        item == file.files[0].name.split('.')[1]
+        item == file.files[0].name.split('.').pop()
       );
       if (!format) {
         file.previousSibling.lastChild.data = 'Прикрепите файл';
@@ -88,7 +88,7 @@ export class RegistrationComponent implements OnInit {
       name: new FormControl(null, Validators.required),
       email: new FormControl(null, [Validators.required, Validators.email], this.toCheckEmail.bind(this)),
       password: new FormControl(null, [Validators.required, Validators.minLength(8)]),
-      file: new FormControl(null, [Validators.required], [this.toCheckFileSize.bind(this), this.toCheckFormat.bind(this)])
+      file: new FormControl(null, Validators.required, [this.toCheckFileSize.bind(this), this.toCheckFormat.bind(this)])
     })
   }
 

@@ -7,70 +7,76 @@
                 <h4 [ngStyle]="{ 'color': regForm.get('name').invalid && regForm.get('name').touched ? 'brown' : 'goldenrod' }">
                     Имя:
                 </h4>
-            </label><br>
+            </label>
             <input 
                 id="name"
                 type="text"
                 formControlName="name"
                 placeholder="Введите"
                 [ngClass]="{ 'invalid-control': regForm.get('name').invalid && regForm.get('name').touched }" 
-            ><br>
+            >
             <span *ngIf="regForm.get('name').errors?.required && regForm.get('name').touched">Имя не может быть пустым!</span>
-        </div><br> 
+        </div>
+        <br> 
   
         <div class="form-group">
             <label for="email">
                 <h4 [ngStyle]="{ 'color': regForm.get('email').invalid && regForm.get('email').touched || regForm.get('email').errors?.emailIsUsed ? 'brown' : 'goldenrod' }">
                     Email:
                 </h4>
-            </label><br>
+            </label>
             <input 
                 id="email"
                 type="text"
                 formControlName="email"
                 placeholder="Введите"
                 [ngClass]="{ 'invalid-control': regForm.get('email').invalid && regForm.get('email').touched || regForm.get('email').errors?.emailIsUsed }" 
-            ><br>
+            >
             <span *ngIf="regForm.get('email').errors?.required && regForm.get('email').touched">Email не может быть пустым!</span>
             <span *ngIf="regForm.get('email').errors?.email && regForm.get('email').touched">Введите корректный Email!</span>
             <span *ngIf="regForm.get('email').errors?.emailIsUsed">"Этот Email уже занят!"</span>
-        </div><br> 
+        </div>
+        <br> 
                              
         <div class="form-group">
             <label for="password">
                 <h4 [ngStyle]="{ 'color': regForm.get('password').invalid && regForm.get('password').touched ? 'brown' : 'goldenrod' }">
                     Пароль:
                 </h4>
-            </label><br>
+            </label>
             <input 
                 id="password"
                 type="password"
                 formControlName="password"
                 placeholder="Введите"
                 [ngClass]="{ 'invalid-control': regForm.get('password').invalid && regForm.get('password').touched }" 
-            ><br>
+            >
             <span *ngIf="regForm.get('password').errors?.required && regForm.get('password').touched">Пароль не может быть пустым!</span>
             <span *ngIf="regForm.get('password').errors?.minlength && regForm.get('password').touched">Пароль не должен содержать меньше<br> 
                 {{ regForm.get('password').errors.minlength.requiredLength }} символов! 
                 Введено символов {{ regForm.get('password').errors.minlength.actualLength }}!
             </span>
-        </div><br>
-        
-        <div class="file-cont">
-            <label for="file" class="file-name"><img src="https://img.icons8.com/metro/26/DAA520/upload.png">Прикрепите файл</label>
-            <input 
-                type="file" 
-                class="input-file"
-                #file 
-                formControlName="file" 
-                id="file" 
-            ><br>
-            <span *ngIf="regForm.get('file').errors?.overSize">Файл не должен превышать 25Мб!</span>
-            <span *ngIf="regForm.get('file').errors?.unsuitableFormat">Прикрепить можно только документ!</span>
-        </div><br>
+        </div>
         <br>
         
-        <button type="submit" class="btn btn-warning" [disabled]="regForm.invalid">Зарегистрироваться</button><br><br>
+        <div class="file-cont">
+            <label for="file" class="file-butt"><img src="https://i.ibb.co/27s8wt6/icons8-upload-26.png">Прикрепите файл</label>
+            <input 
+                #file 
+                id="file"
+                type="file" 
+                class="input-file"
+                formControlName="file"  
+            >
+            <span *ngIf="regForm.get('file').errors?.overSize">Файл не должен превышать 25Мб!</span>
+            <span *ngIf="regForm.get('file').errors?.unsuitableFormat">Прикрепить можно только документ!</span>
+        </div>
+        <br>
+        <br>
+        
+        <button type="submit" class="btn btn-warning" [disabled]="regForm.invalid">Зарегистрироваться</button>
+        <br>
+        <br>
         <p>Уже есть аккаунт?&nbsp;<a [routerLink]="['/kitchen', 'ent']">Войти!</a></p>
 
         </form>

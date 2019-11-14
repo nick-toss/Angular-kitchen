@@ -4,8 +4,12 @@
     <router-outlet></router-outlet>
     <div *ngFor="let comm of commentsList">
         <p>
-            <b>{{ comm.createdBy.username }}</b>, Оценка - <b>{{ comm.rate }}</b>.<br> 
-            <span>{{ comm.text }}</span><br>
+            <b>{{ comm.createdBy.username }}</b>, Оценка - <b>{{ comm.rate }}.</b>
+            <br> 
+            <br>
+            <span>{{ comm.text }}</span>
+            <br>
+            <br>
             <span>{{ comm.date }}</span>
         </p>
     </div>

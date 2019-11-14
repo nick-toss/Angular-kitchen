@@ -23,8 +23,10 @@ export class EntranceComponent implements OnInit {
     let userPass = entForm.controls.password.value;
     this.http.get(`http://localhost:3000/users?email=${userEmail}`)
     .subscribe(user => {
-      if (user[0].password == userPass) {
-        this.router.navigate(['/catalog']);
+      if (user[0]) {
+        if (user[0].password == userPass) {
+          this.router.navigate(['/catalog']);
+        }
       } else {
         this.wrongData = true;
       }

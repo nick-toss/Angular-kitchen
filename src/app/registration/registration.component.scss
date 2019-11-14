@@ -2,7 +2,7 @@
 
 .form-reg-cont {
   width: 400px;
-  height: 650px;
+  height: 700px;
   padding: 50px;
   border-radius: 0 0 50px 50px;
   background-color:  white;
@@ -28,8 +28,8 @@
 .file-cont {
   display: inline-block;
   position: relative;
-  left: 15px;
-  width: 300px;   
+  left: 5px;
+  width: 300px; 
 }
 
 
@@ -38,10 +38,10 @@
 }
 
 
-.file-name {
+.file-butt {
   padding: 10px;
   position: relative;
-  left: 26px;
+  left: 36px;
   font-family: cursive;
   border: 2px solid goldenrod;
   border-radius: 30px;
@@ -54,7 +54,7 @@
 }
 
 
-.file-name:hover {
+.file-butt:hover {
   cursor: pointer;
   background-color: gray;
 }
@@ -102,8 +102,8 @@ h4 {
 
 p {
   color: grey;
-  position: absolute;
-  left: 105px;
+  position: relative;
+  left: 56px;
 }
 
 

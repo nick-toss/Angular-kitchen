@@ -1,19 +1,20 @@
 
 <div class="form-ent-cont" [@appears]="'show'">
     <form [formGroup]="entForm" autocomplete="off" (ngSubmit)="toCheckUser(entForm)">
+
         <div class="form-group">
             <label for="email">
                 <h4 [ngStyle]="{ 'color': entForm.get('email').invalid && entForm.get('email').touched || wrongData ? 'brown' : 'goldenrod' }">
                     Email:
                 </h4>
-            </label><br>
+            </label>
             <input 
                 id="email"
                 type="text" 
                 formControlName="email"
                 placeholder="Введите"
                 [ngClass]="{ 'invalid-control': entForm.get('email').invalid && entForm.get('email').touched || wrongData }" 
-            ><br>
+            >
             <span *ngIf="entForm.get('email').errors?.required && entForm.get('email').touched">Email не может быть пустым!</span>
             <span *ngIf="entForm.get('email').errors?.email && entForm.get('email').touched">Введите корректный Email!</span>
         </div><br> 
@@ -23,20 +24,25 @@
                 <h4 [ngStyle]="{ 'color': entForm.get('password').invalid && entForm.get('password').touched || wrongData ? 'brown' : 'goldenrod' }">
                     Пароль:
                 </h4>
-            </label><br>
+            </label>
             <input 
                 id="password"
                 type="password"
                 formControlName="password"
                 placeholder="Введите"
                 [ngClass]="{ 'invalid-control': entForm.get('password').invalid && entForm.get('password').touched || wrongData }" 
-            ><br>
+            >
             <span *ngIf="entForm.get('password').errors?.required && entForm.get('password').touched">Пароль не может быть пустым!</span>
         </div>
 
-        <span *ngIf="wrongData">Email или пароль введены не верно!</span><br><br>
-        <button type="submit" class="btn btn-warning">Войти</button><br><br>
+        <span *ngIf="wrongData">Email или пароль введены не верно!</span>
+        <br>
+        <br>
+        <button type="submit" class="btn btn-warning" [disabled]="entForm.invalid">Войти</button>
+        <br>
+        <br>
         <p>Нет аккаунта?&nbsp;<a [routerLink]="['/kitchen']">Зарегистрируйтесь!</a></p>
+
     </form>
 </div>
 

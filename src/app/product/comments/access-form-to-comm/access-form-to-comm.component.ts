@@ -46,12 +46,12 @@ export class AccessFormToCommComponent implements OnInit {
   toAddComm(commText) {
     let comment = {
       productId: this.prodId,
+      rate: this.rate,
+      text: commText.value,
       createdBy: {
         id: this.user.id,
         username: this.user.name
       },
-      rate: this.rate,
-      text: commText.value,
       date: new Date().toLocaleString('ru', {
         year: 'numeric',
         month: 'long',
