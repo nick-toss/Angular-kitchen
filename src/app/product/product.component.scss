@@ -1,54 +1,51 @@
 
 .main-cont {
-  position: relative;
-  background-color: gray;
   padding: 35px;
   height: 100vh;
+  position: relative;
+  background-color: gray;
 }
 
 
 .prod {
-  background-color: white;
-  position: relative;
   left: 25%;
-  padding: 10px;
   width: 800px;
   height: auto;
+  padding: 10px;
+  position: relative;
   border-radius: 20px;  
-}
-
-
-.prod:hover {
-  box-shadow: 0 1px 10px 0 black; 
+  background-color: white;
+  &:hover {
+    box-shadow: 0 1px 10px 0 black; 
+  }
 }
 
 
 .prod-img {
+  left: 250px;
   cursor: pointer;
   position: relative;
-  left: 250px;
-}
-
-
-.prod-img:hover + .prod-name {
-  border-top: 1px solid goldenrod;
-  color: goldenrod;
-  font-weight: bold;
+  &:hover + .prod-name {
+    font-weight: bold;
+    color: goldenrod;
+    border-top: 1px solid goldenrod;
+  }
 }
 
 
 .prod-name {
   width: 780px;
+  color: grey;
   font-size: 20px;
   padding-top: 10px;
   font-family: cursive;
-  color: grey;
   border-top: 1px solid grey;
+  a {
+    text-decoration: none;
+  }
 }
 
 
-.prod-name a {
-  text-decoration: none;
-}
+
 
     

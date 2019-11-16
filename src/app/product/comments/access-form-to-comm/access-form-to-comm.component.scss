@@ -1,11 +1,11 @@
 
 .new-comm,  .com-form{
-  position: relative;
   top: 30px;
   left: 190px;
   width: 350px;
   height: 300px;
   padding: 20px;
+  position: relative;
   border-radius: 20px;
   margin-bottom: 50px;
   background-color: white;
@@ -20,8 +20,8 @@
 
 
 .comm-text {
-  position: relative;
   top: 20px;
+  position: relative;
 }
 
 
@@ -31,25 +31,19 @@ textarea {
 
 
 .invalid-control, .comm-text-error {
-  border-color: brown;
   color: brown;
-}
-
-
-.comm-text-error:focus {
-  outline-color: brown;
-} 
-
-
-.invalid-control::placeholder {
-  color: brown;
-}
-
-
-.invalid-control:focus {
   border-color: brown;
+  &:focus {
+    border-color: brown;
+  }
+  &:focus {
+    outline-color: brown;
+  } 
+  &::placeholder {
+    color: brown;
+  }
 }
-
+ 
 
 .emailError {
   color: brown;
@@ -58,16 +52,16 @@ textarea {
 
 
 .btn-warning {
-  position: relative;
   left: 40%;
+  position: relative;
   border-radius: 20px;
 }
 
 
 .btn-primary {
-  position: relative;
   top: 30px;
   left: 350px;
+  position: relative;
   border-radius: 20px;
 }
 
@@ -76,12 +70,10 @@ input {
   width: 300px;
   border: none;
   border-bottom: 1px solid grey;
-}
-
-
-input:focus {
-  outline: none;
-  border-color: goldenrod;
+  &:focus {
+    outline: none;
+    border-color: goldenrod;
+  }
 }
 
 
@@ -92,9 +84,9 @@ input:focus {
 
 
 h4 {
-  font-family: cursive;
   font-weight: bold;
   user-select: none;
+  font-family: cursive;
 }
 
 

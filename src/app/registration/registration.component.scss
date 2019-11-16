@@ -1,35 +1,30 @@
 
-
 .form-reg-cont {
   width: 400px;
   height: 700px;
   padding: 50px;
+  background-color: white;
   border-radius: 0 0 50px 50px;
-  background-color:  white;
 }
 
 
 .invalid-control {
-  border-color: brown;
   color: brown;
-}
-
-
-.invalid-control::placeholder {
-  color: brown;
-}
-
-
-.invalid-control:focus {
   border-color: brown;
+  &::placeholder {
+    color: brown;
+  }
+  &:focus {
+    border-color: brown;
+  }
 }
 
 
 .file-cont {
-  display: inline-block;
+  left: 5px; 
+  width: 300px;
   position: relative;
-  left: 5px;
-  width: 300px; 
+  display: inline-block;
 }
 
 
@@ -39,24 +34,22 @@
 
 
 .file-butt {
-  padding: 10px;
-  position: relative;
   left: 36px;
-  font-family: cursive;
-  border: 2px solid goldenrod;
-  border-radius: 30px;
-  color: goldenrod;
-  user-select: none;
   width: 210px;
-  white-space: nowrap;
+  padding: 10px;
   overflow: hidden;
+  user-select: none;
+  color: goldenrod;
+  position: relative;
+  border-radius: 30px;
+  white-space: nowrap;
+  font-family: cursive;
   text-overflow: ellipsis;
-}
-
-
-.file-butt:hover {
-  cursor: pointer;
-  background-color: gray;
+  border: 2px solid goldenrod;
+  &:hover {
+    cursor: pointer;
+    background-color: gray;
+  }
 }
 
 
@@ -64,12 +57,10 @@ input {
   width: 300px;
   border: none;
   border-bottom: 1px solid grey;
-}
-
-
-input:focus {
-  outline: none;
-  border-color: goldenrod;
+  &:focus {
+    outline: none;
+    border-color: goldenrod;
+  }
 }
 
 
@@ -88,22 +79,21 @@ span {
 img {
   width: 25px;
   height: 25px;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin: 0 5px 0 5px;
 }
 
 
 h4 {
-  font-family: cursive;
   font-weight: bold;
   user-select: none;
+  font-family: cursive;
 }
 
 
 p {
+  left: 56px;
   color: grey;
   position: relative;
-  left: 56px;
 }
 
 
