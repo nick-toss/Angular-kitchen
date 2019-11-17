@@ -1,13 +1,5 @@
 {
-  "users": [
-    {
-      "name": "Nick",
-      "email": "nickbronson5@gmail.com",
-      "password": "m26pershing",
-      "file": "frontend1.pdf",
-      "id": 1
-    }
-  ],
+  "users": [],
   "catalog": [
     {
       "title": "Сковорода Rotex 24 см (RC132M-24 Modena)",
