@@ -34,7 +34,7 @@ export class AccessFormToCommComponent implements OnInit {
   }
 
 
-  change(sign) {
+  toSetRate(sign) {
     if (this.rate < 5 && sign) {
       this.rate++;
     } else if (this.rate > 0 && !sign) {

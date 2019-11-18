@@ -26,7 +26,7 @@
 </div><br>
 
 <div class="com-form" *ngIf="commFormIsVisible" [@appears]="'show'">
-    <span>Оцените товар:&nbsp;&nbsp;<button (click)="change(false)">-</button>&nbsp;{{ rate }}&nbsp;<button (click)="change(true)">+</button></span>  
+    <span>Оцените товар:&nbsp;&nbsp;<button (click)="toSetRate(false)">-</button>&nbsp;{{ rate }}&nbsp;<button (click)="toSetRate(true)">+</button></span>  
     <div class="comm-text">
         <label for="commText"><b [ngStyle]="{'color': commText.invalid && commText.touched ? 'brown' : ''}">Ваш комментарий:</b></label>
         <textarea 
